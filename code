@@ -1,159 +1,118 @@
-
-
-<center><div class="loyalty form" style="z-index: 999; position: absolute; left:50%; transform: translate(-50%, -50%);
-    ">
-    <form style="position:relative; top:22px;">
-    <label for="phone">Phone Number:</label> <br><input class= "phonenumber" type="tel" name="phone" id="phone" oninput="this.value = formatPhoneNumberDisplay(this.value)"> <button class = "check-loyalty-button" type="submit" onclick="submitForm(event)">Check Vento Bean Balance</button>
-    </form>
-            <div id="loyalty-account-message" style="margin-top: 30px;"></div>
-            <div id="loading-gif" style="display: none;">
-                <img src="https://cdn.shopify.com/s/files/1/0431/3120/7843/files/Untitled-1_2a04a2f5-8965-4302-a642-75336464f6db.gif?v=1681838681" alt="Loading...">
-              </div>
-              
-            <div id="reward-message"></div>
-            <div id="signup-button" style="display: none;"><a href="https://squareup.com/loyalty/MLBQHEWJ15TF4"><button class = "signup-button">Sign up now</button></a></div>
-            </div></center>
-        
-    
-    
-    
-    
-            <style type="text/css">
+<center>
+<div class="loyalty form" style="z-index: 999; position: absolute; left: 50%; transform: translate(-50%, -50%);"><form style="position: relative; top: 22px;"><label for="phone">Phone Number:</label> <br /><input class="phonenumber" type="tel" name="phone" id="phone" oninput="this.value = formatPhoneNumberDisplay(this.value)" /> <button class="check-loyalty-button" type="submit" onclick="submitForm(event)">Check Vento Bean Balance</button></form>
+<div id="loyalty-account-message" style="margin-top: 30px;"></div>
+<div id="loading-gif" style="display: none;"><img src="https://cdn.shopify.com/s/files/1/0431/3120/7843/files/Untitled-1_2a04a2f5-8965-4302-a642-75336464f6db.gif?v=1681838681" alt="Loading..." /></div>
+<div id="reward-message"></div>
+<div id="signup-button" style="display: none;"><a href="https://squareup.com/loyalty/MLBQHEWJ15TF4"><button class="signup-button">Sign up now</button></a></div>
+</div>
+</center>
+<style type="text/css"><!--
                 @font-face {
                   font-family: "Helvetica_LT_Std_Black";
                   src: url("https://cdn.shopify.com/s/files/1/0746/0090/7041/files/Helvetica_LT_Std_Black.otf?v=1683068534")
                     format("opentype");
                 }
-              </style>
-              <center><div class="body2" id="body2" style="z-index: 2; position: absolute;">
-                <div class="container2">
-                  <div class="progress-container">
-                    <div class="progress" id="progress"></div>
-                    <div class="wholediv15bean">
-                      <div class="rectangle">
-                        <div class="rectangle2">
-                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
-                        </div>
-                        <h3 class="freesticker">FREE<br>STICKER</h3>
-                        <div class="redeem-btn" onclick="showConfirmationPopup(15)" style="cursor: pointer;">
-                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
-                        </div>
-                      </div>
-                      <div class="circle">
-                        <h3 class="t15bean">15</h3>
-                        <h3 class="beantext">Beans</h3>
-                      </div>
-                    </div>
-                    <div class="wholediv35bean">
-                      <div class="rectangle">
-                        <div class="rectangle2">
-                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
-                        </div>
-                        <h3 class="freepastry">FREE<br>PASTRY</h3>
-                        <div class="redeem-btn" onclick="showConfirmationPopup(35)" style="cursor: pointer;">
-                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
-                        </div>
-                      </div>
-                      <div class="circle">
-                        <h3 class="t35bean">35</h3>
-                        <br>
-                        <h3 class="beantext">Beans</h3>
-                      </div>
-                    </div>
-                    <div class="wholediv50bean">
-                      <div class="rectangle">
-                        <div class="rectangle2">
-                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
-                        </div>
-                        <h3 class="freedrink">FREE<br>DRINK</h3>
-                        <div class="redeem-btn" onclick="showConfirmationPopup(50)" style="cursor: pointer;">
-                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
-                        </div>
-                      </div>
-                      <div class="circle">
-                        <h3 class="t50bean">50</h3>
-                        <br>
-                        <h3 class="beantext">Beans</h3>
-                      </div>
-                    </div>
-                    <div class="wholediv100bean">
-                      <div class="rectangle">
-                        <div class="rectangle2">
-                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
-                        </div>
-                        <h3 class="freemerch">FREE<br>MERCH</h3>
-                        <div class="redeem-btn" onclick="showConfirmationPopup(100)" style="cursor: pointer;">
-                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
-                        </div>
-                      </div>
-                      <div class="circle">
-                        <h3 class="t100bean">100</h3>
-                        <br>
-                        <h3 class="beantext">Beans</h3>
-                      </div>
-                    </div>
-                    <div class="wholediv150bean">
-                      <div class="rectangle">
-                        <div class="rectangle2">
-                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
-                        </div>
-                        <h3 class="freecup">FREE<br>CUP</h3>
-                        <div class="redeem-btn" onclick="showConfirmationPopup(150)" style="cursor: pointer;">
-                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
-                        </div>
-                      </div>
-                      <div class="circle">
-                        <h3 class="t150bean">150</h3>
-                        <br>
-                        <h3 class="beantext">Beans</h3>
-                      </div>
-                    </div>
-                    <div class="wholediv200bean">
-                      <div class="rectangle">
-                        <div class="rectangle2">
-                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
-                        </div>
-                        <h3 class="freebag">FREE BAG<br>OF COFFEE</h3>
-                        <div class="redeem-btn" onclick="showConfirmationPopup(200)" style="cursor: pointer;">
-                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
-                        </div>
-                      </div>
-                      <div class="circle">
-                        <h3 class="t200bean">200</h3>
-                        <br>
-                        <h3 class="beantext">Beans</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div></center>
-    
-    
-    
-    
-    
-        <br> <br> <br>
-        <div id="confirmation-popup" onclick="hideConfirmationPopup();" style="display: none; position: fixed; z-index: 9998; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
-        <div id="confirmation-msg" style="display: none; z-index: 9999; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border-radius: 5px;">
-            <div id="loading-gif2" style="display: none;">
-                <img src="https://cdn.shopify.com/s/files/1/0431/3120/7843/files/Untitled-1_2a04a2f5-8965-4302-a642-75336464f6db.gif?v=1681838681" alt="Loading...">
-              </div>
-            <div id="confirmation-wording">
-    <p>Are you sure? Your points will be converted into an online coupon, and will no longer be eligible to redeem at the coffee shop. You can always order online and pick up in store!</p>
-            <form>
-              <label for="email">Email Address:</label>
-              <input class="email" type="email" id="email" name="email" required oninput="handleEmailInput()">
-            </form>
-            <button id="confirm-reward-btn" class="confirm-reward-btn"onclick="redeemReward(rewardPoints);" disabled>Yes</button> 
-            <button class="check-loyalty-button"onclick="hideConfirmationPopup();">No</button>
-          </div>
-    </div></center>
-    
-    
-    
-    
-    
-          <script>
+              
+--></style>
+<div class="body2" id="body2">
+<div class="container2">
+<div class="progress-container">
+<div class="progress" id="progress"></div>
+<div class="wholediv15bean">
+<div class="rectangle">
+<div class="rectangle2"><img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean" /></div>
+<h3 class="freesticker">FREE<br />STICKER</h3>
+<div class="redeem-btn" onclick="showConfirmationPopup(15)" style="cursor: pointer;">
+<h3 class="button15t">REDEEM<br />ONLINE</h3>
+</div>
+</div>
+<div class="circle">
+<h3 class="t15bean">15</h3>
+<h3 class="beantext">Beans</h3>
+</div>
+</div>
+<div class="wholediv35bean">
+<div class="rectangle">
+<div class="rectangle2"><img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean" /></div>
+<h3 class="freepastry">FREE<br />PASTRY</h3>
+<div class="redeem-btn" onclick="showConfirmationPopup(35)" style="cursor: pointer;">
+<h3 class="button15t">REDEEM<br />ONLINE</h3>
+</div>
+</div>
+<div class="circle">
+<h3 class="t35bean">35</h3>
+<br />
+<h3 class="beantext">Beans</h3>
+</div>
+</div>
+<div class="wholediv50bean">
+<div class="rectangle">
+<div class="rectangle2"><img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean" /></div>
+<h3 class="freedrink">FREE<br />DRINK</h3>
+<div class="redeem-btn" onclick="showConfirmationPopup(50)" style="cursor: pointer;">
+<h3 class="button15t">REDEEM<br />ONLINE</h3>
+</div>
+</div>
+<div class="circle">
+<h3 class="t50bean">50</h3>
+<br />
+<h3 class="beantext">Beans</h3>
+</div>
+</div>
+<div class="wholediv100bean">
+<div class="rectangle">
+<div class="rectangle2"><img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean" /></div>
+<h3 class="freemerch">FREE<br />MERCH</h3>
+<div class="redeem-btn" onclick="showConfirmationPopup(100)" style="cursor: pointer;">
+<h3 class="button15t">REDEEM<br />ONLINE</h3>
+</div>
+</div>
+<div class="circle">
+<h3 class="t100bean">100</h3>
+<br />
+<h3 class="beantext">Beans</h3>
+</div>
+</div>
+<div class="wholediv150bean">
+<div class="rectangle">
+<div class="rectangle2"><img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean" /></div>
+<h3 class="freecup">FREE<br />CUP</h3>
+<div class="redeem-btn" onclick="showConfirmationPopup(150)" style="cursor: pointer;">
+<h3 class="button15t">REDEEM<br />ONLINE</h3>
+</div>
+</div>
+<div class="circle">
+<h3 class="t150bean">150</h3>
+<br />
+<h3 class="beantext">Beans</h3>
+</div>
+</div>
+<div class="wholediv200bean">
+<div class="rectangle">
+<div class="rectangle2"><img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean" /></div>
+<h3 class="freebag">FREE BAG<br />OF COFFEE</h3>
+<div class="redeem-btn" onclick="showConfirmationPopup(200)" style="cursor: pointer;">
+<h3 class="button15t">REDEEM<br />ONLINE</h3>
+</div>
+</div>
+<div class="circle">
+<h3 class="t200bean">200</h3>
+<br />
+<h3 class="beantext">Beans</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br /> <br /> <br />
+<div id="confirmation-popup" onclick="hideConfirmationPopup();" style="display: none; position: fixed; z-index: 9998; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+<div id="confirmation-msg" style="display: none; z-index: 9999; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border-radius: 5px;">
+<div id="loading-gif2" style="display: none;"><img src="https://cdn.shopify.com/s/files/1/0431/3120/7843/files/Untitled-1_2a04a2f5-8965-4302-a642-75336464f6db.gif?v=1681838681" alt="Loading..." /></div>
+<div id="confirmation-wording">
+<p>Are you sure? Your points will be converted into an online coupon, and will no longer be eligible to redeem at the coffee shop. You can always order online and pick up in store!</p>
+<form><label for="email">Email Address:</label> <input class="email" type="email" id="email" name="email" required="" oninput="handleEmailInput()" /></form><button id="confirm-reward-btn" class="confirm-reward-btn" onclick="redeemReward(rewardPoints);" disabled="disabled">Yes</button> <button class="check-loyalty-button" onclick="hideConfirmationPopup();">No</button></div>
+</div>
+<script>// <![CDATA[
             function formatPhoneNumberDisplay(value) {
                   // Remove any non-numeric characters
                   value = value.replace(/[^0-9]/g, '');
@@ -464,19 +423,9 @@
             });
         
             const activeCircles = document.querySelectorAll(".active");
-          }    </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        <style>
-
+          }    
+// ]]></script>
+<style><!--
                 label {
                     font-family: helvetica;
                     font-weight: bolder;
@@ -706,23 +655,7 @@
       html {
         box-sizing: border-box;
       }
-    
-      #body2 {
-        transform: rotate(90deg);
-        background: #ffffff;
-        font-family: "Monsterrat";
-        display: inline-grid;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        margin: 0;
-        position: absolute;
-        width: 363px;
-        top: 0%;
-        scale: 1.2;
-        height: 83%;
-      }
-    
+        
       .container2 {
         text-align: center;
       }
@@ -731,7 +664,7 @@
         content: "";
         background: #3e8899;
         position: absolute;
-        top: 50%;
+        top: 0%;
         left: 0;
         transform: translateY(-50%);
         height: 4px;
@@ -744,6 +677,7 @@
         justify-content: space-between;
         position: relative;
         max-width: 100%;
+        top: 0px;
         width: 350px;
       }
     
@@ -766,6 +700,8 @@
         height: 50px;
         width: 50px;
         display: flex;
+        position: absolute;
+        top: -22px;
         align-items: center;
         justify-content: center;
         border: 3px solid var(--line-border-empty);
@@ -816,23 +752,39 @@
         box-shadow: none !important;
         margin-bottom: none !important;
       }
+      .body2 {
+        transform: rotate(90deg);
+        background: #ffffff;
+        font-family: "Monsterrat";
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        width: 363px;
+        top: 0%;
+        scale: 1.2;
+        height: 83%;
+      }
+
       @media screen and (min-width: 768px) {
-        #body2 {
+        .body2 {
           transform: rotate(0deg);
           background: #a1646400;
           font-family: "Monsterrat";
-          display: inline-grid;
+          display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
           overflow: hidden;
-          margin: 0;
-          position: absolute;
+          margin: auto;
+          position: relative;
           width: 363px;
-          top: 0%;
           scale: 1.5;
-          right: 37%;
           height: 83%;
+          padding-top: 200px
+
         }
+
         h3 {
           color: #3e8899;
           transform: rotate(0deg);
@@ -848,19 +800,19 @@
         .t15bean {
           font-size: 1.5em;
           position: absolute;
-          top: 6px;
+          top: 2px;
           margin-right: 0px;
         }
         .t35bean {
           font-size: 1.5em;
           position: absolute;
-          top: 6px;
+          top: 2px;
           margin-right: 0px;
         }
         .t50bean {
           font-size: 1.5em;
           position: absolute;
-          top: 6px;
+          top: 2px;
           margin-right: 0px;
         }
         .t100bean {
@@ -885,12 +837,10 @@
           margin-top: -3px;
         }
         .rectangle {
-          width: 50px;
-          height: 224px;
-          top: 46%;
+          top: 0px;
           border-radius: 50px 50px 0px 0px;
           z-index: -1;
-          position: absolute;
+          position: relative;
           transform: rotate(180deg);
           background-color: #d1b48d;
         }
@@ -1117,4 +1067,5 @@
         --border-opacity: 0 !important;
       }  
 
-                </style>
+                
+--></style>
