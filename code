@@ -1,0 +1,1120 @@
+
+
+<center><div class="loyalty form" style="z-index: 999; position: absolute; left:50%; transform: translate(-50%, -50%);
+    ">
+    <form style="position:relative; top:22px;">
+    <label for="phone">Phone Number:</label> <br><input class= "phonenumber" type="tel" name="phone" id="phone" oninput="this.value = formatPhoneNumberDisplay(this.value)"> <button class = "check-loyalty-button" type="submit" onclick="submitForm(event)">Check Vento Bean Balance</button>
+    </form>
+            <div id="loyalty-account-message" style="margin-top: 30px;"></div>
+            <div id="loading-gif" style="display: none;">
+                <img src="https://cdn.shopify.com/s/files/1/0431/3120/7843/files/Untitled-1_2a04a2f5-8965-4302-a642-75336464f6db.gif?v=1681838681" alt="Loading...">
+              </div>
+              
+            <div id="reward-message"></div>
+            <div id="signup-button" style="display: none;"><a href="https://squareup.com/loyalty/MLBQHEWJ15TF4"><button class = "signup-button">Sign up now</button></a></div>
+            </div></center>
+        
+    
+    
+    
+    
+            <style type="text/css">
+                @font-face {
+                  font-family: "Helvetica_LT_Std_Black";
+                  src: url("https://cdn.shopify.com/s/files/1/0746/0090/7041/files/Helvetica_LT_Std_Black.otf?v=1683068534")
+                    format("opentype");
+                }
+              </style>
+              <center><div class="body2" id="body2" style="z-index: 2; position: absolute;">
+                <div class="container2">
+                  <div class="progress-container">
+                    <div class="progress" id="progress"></div>
+                    <div class="wholediv15bean">
+                      <div class="rectangle">
+                        <div class="rectangle2">
+                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
+                        </div>
+                        <h3 class="freesticker">FREE<br>STICKER</h3>
+                        <div class="redeem-btn" onclick="showConfirmationPopup(15)" style="cursor: pointer;">
+                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
+                        </div>
+                      </div>
+                      <div class="circle">
+                        <h3 class="t15bean">15</h3>
+                        <h3 class="beantext">Beans</h3>
+                      </div>
+                    </div>
+                    <div class="wholediv35bean">
+                      <div class="rectangle">
+                        <div class="rectangle2">
+                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
+                        </div>
+                        <h3 class="freepastry">FREE<br>PASTRY</h3>
+                        <div class="redeem-btn" onclick="showConfirmationPopup(35)" style="cursor: pointer;">
+                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
+                        </div>
+                      </div>
+                      <div class="circle">
+                        <h3 class="t35bean">35</h3>
+                        <br>
+                        <h3 class="beantext">Beans</h3>
+                      </div>
+                    </div>
+                    <div class="wholediv50bean">
+                      <div class="rectangle">
+                        <div class="rectangle2">
+                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
+                        </div>
+                        <h3 class="freedrink">FREE<br>DRINK</h3>
+                        <div class="redeem-btn" onclick="showConfirmationPopup(50)" style="cursor: pointer;">
+                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
+                        </div>
+                      </div>
+                      <div class="circle">
+                        <h3 class="t50bean">50</h3>
+                        <br>
+                        <h3 class="beantext">Beans</h3>
+                      </div>
+                    </div>
+                    <div class="wholediv100bean">
+                      <div class="rectangle">
+                        <div class="rectangle2">
+                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
+                        </div>
+                        <h3 class="freemerch">FREE<br>MERCH</h3>
+                        <div class="redeem-btn" onclick="showConfirmationPopup(100)" style="cursor: pointer;">
+                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
+                        </div>
+                      </div>
+                      <div class="circle">
+                        <h3 class="t100bean">100</h3>
+                        <br>
+                        <h3 class="beantext">Beans</h3>
+                      </div>
+                    </div>
+                    <div class="wholediv150bean">
+                      <div class="rectangle">
+                        <div class="rectangle2">
+                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
+                        </div>
+                        <h3 class="freecup">FREE<br>CUP</h3>
+                        <div class="redeem-btn" onclick="showConfirmationPopup(150)" style="cursor: pointer;">
+                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
+                        </div>
+                      </div>
+                      <div class="circle">
+                        <h3 class="t150bean">150</h3>
+                        <br>
+                        <h3 class="beantext">Beans</h3>
+                      </div>
+                    </div>
+                    <div class="wholediv200bean">
+                      <div class="rectangle">
+                        <div class="rectangle2">
+                          <img src="https://cdn.shopify.com/s/files/1/0746/0090/7041/files/533_small_US_en.png?v=1683133585" class="img15bean">
+                        </div>
+                        <h3 class="freebag">FREE BAG<br>OF COFFEE</h3>
+                        <div class="redeem-btn" onclick="showConfirmationPopup(200)" style="cursor: pointer;">
+                          <h3 class="button15t">REDEEM<br>ONLINE</h3>
+                        </div>
+                      </div>
+                      <div class="circle">
+                        <h3 class="t200bean">200</h3>
+                        <br>
+                        <h3 class="beantext">Beans</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div></center>
+    
+    
+    
+    
+    
+        <br> <br> <br>
+        <div id="confirmation-popup" onclick="hideConfirmationPopup();" style="display: none; position: fixed; z-index: 9998; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+        <div id="confirmation-msg" style="display: none; z-index: 9999; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border-radius: 5px;">
+            <div id="loading-gif2" style="display: none;">
+                <img src="https://cdn.shopify.com/s/files/1/0431/3120/7843/files/Untitled-1_2a04a2f5-8965-4302-a642-75336464f6db.gif?v=1681838681" alt="Loading...">
+              </div>
+            <div id="confirmation-wording">
+    <p>Are you sure? Your points will be converted into an online coupon, and will no longer be eligible to redeem at the coffee shop. You can always order online and pick up in store!</p>
+            <form>
+              <label for="email">Email Address:</label>
+              <input class="email" type="email" id="email" name="email" required oninput="handleEmailInput()">
+            </form>
+            <button id="confirm-reward-btn" class="confirm-reward-btn"onclick="redeemReward(rewardPoints);" disabled>Yes</button> 
+            <button class="check-loyalty-button"onclick="hideConfirmationPopup();">No</button>
+          </div>
+    </div></center>
+    
+    
+    
+    
+    
+          <script>
+            function formatPhoneNumberDisplay(value) {
+                  // Remove any non-numeric characters
+                  value = value.replace(/[^0-9]/g, '');
+                
+                  // Add '1' to the beginning if necessary
+                  if (value.length === 10 && value[0] !== '1') {
+                    value = '1' + value;
+                  }
+                
+                  // Format the phone number as 1 (XXX) XXX-XXXX
+                  if (value.length > 0) {
+                    value = value.replace(/(\d{1})(\d{3})(\d{3})(\d{4})/, '1 ($2) $3-$4');
+                  }
+                
+                  return value;
+                }
+                const stepCircles = document.querySelectorAll(".circle");
+                console.log('stepCircles:', stepCircles);
+    
+                const stepRectangles = document.querySelectorAll(".rectangle");
+                console.log('stepRectangles:', stepRectangles);
+    
+                const stepredeembtn = document.querySelectorAll(".redeem-btn");
+                console.log('stepredeembtn:', stepredeembtn);
+    
+                let currentActive = 0;
+                update(currentActive);
+                
+                var phoneNumber
+                var redeemedPoints
+                
+                function formatPhoneNumberSubmit(value) {
+                  // Remove any non-numeric characters
+                  value = value.replace(/[^0-9]/g, '');
+                
+                  // Add '1' to the beginning if necessary
+                  if (value.length === 10) {
+                    value = '1' + value;
+                  }
+                
+                  // Format the phone number as +1XXXXXXXXXX
+                  value = "+1" + value;
+                  phoneNumber = value;
+                  console.log(phoneNumber);
+                
+                  return value;
+                }
+                
+                
+                function showConfirmationPopup(rewardPoints) {
+              // Set the rewardPoints variable to a global variable for later use
+              window.rewardPoints = rewardPoints;
+              console.log(phoneNumber);
+              
+              // Show the confirmation popup
+              document.getElementById('confirmation-popup').style.display = 'block';
+              document.getElementById('confirmation-msg').style.display = 'block';
+        
+            }
+            
+            function hideConfirmationPopup() {
+              // Hide the confirmation popup
+              document.getElementById('confirmation-popup').style.display = 'none';
+              document.getElementById('confirmation-msg').style.display = 'none';
+        
+            }
+            
+            var emailAddress   
+            function redeemReward() {
+              var loadingGif2 = document.getElementById("loading-gif2");
+              var confirmationWording = document.getElementById("confirmation-wording")
+              confirmationWording.style.display ="none"
+              loadingGif2.style.display = "block";
+                
+              // Send a request with the customer's phone number and reward point value
+              fetch('https://us-central1-naot-inventory.cloudfunctions.net/ventoRedeemOnline', {
+                method: 'POST',
+                body: JSON.stringify({
+                  phone: phoneNumber,
+                  email: emailAddress,
+                  points: window.rewardPoints // Use the global rewardPoints variable
+                }),
+                headers: {
+                  'Content-Type': 'application/json'
+                }
+              })
+              .then(response => {
+                // Handle the response from the server here
+                if (response.status === 200) {
+                    loadingGif2.style.display = "none";
+        
+                    handleCouponCodeResponse(response);
+                } else {
+                  console.log("Error redeeming reward: " + response.status);
+                }
+              })
+              .catch(error => {
+                // Handle the error here
+                console.error('Error sending redemption request', error);
+              });
+            }
+        
+            var couponCode
+        
+            function CopyToClipboard(id) {
+                var r = document.createRange();
+                r.selectNode(document.getElementById(id));
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(r);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+                var referralCodeEl = document.getElementById(id);
+                console.log(couponCode);
+                referralCodeEl.innerHTML = 'Copied!';
+                setTimeout(function() {
+                  referralCodeEl.innerHTML = couponCode;
+                }, 2000);
+              }
+          
+            function handleCouponCodeResponse(response) {
+              if (response.status === 200) {
+                response.json().then(function(data) {
+                  // Extract the coupon code from the response
+                  couponCode = data.code;
+                
+                  // Update the confirmation message with the coupon code
+                  var confirmationMsg = document.getElementById("confirmation-msg");
+                  confirmationMsg.innerHTML = "<p>Your unique coupon code is:<br><br><span id='coupon-code'>" + couponCode + "</span></p><br><a class='copy-coupon' href='#'onclick=CopyToClipboard('coupon-code');return false;'>Copy Code</a><p>You will also receive an email containing the code for your records</p><button class='check-loyalty-button' onclick='hideConfirmationPopup();'>Back</button>";
+                  confirmationMsg.style.display = "block";
+                
+                  // Show the confirmation popup
+                  var confirmationPopup = document.getElementById("confirmation-popup");
+                  confirmationPopup.style.display = "block";
+                });
+              } else {
+                console.log("Error fetching coupon code: " + response.status);
+              }
+            }
+            // Display all the possible reward messages based on the loyalty account balance
+            var rewardMessages = [];
+            var rewardMessagesDisplayed = false;
+            
+            function displayRewardMessages(loyaltyAccountBalance) {
+              if (loyaltyAccountBalance >= 200) {
+                rewardMessages.push('<div class="200" style="position: relative;"><svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; top: 0; left: 0; z-index: -1;"><rect x="0" y="0" width="100" height="100" fill="#ccc" /></svg>Free Bag of Coffee - 200 Beans<button class="redeem-btn" onclick="showConfirmationPopup(200)" style="margin-left: 10px; background-color: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Redeem Online</button></div>');
+              }
+              if (loyaltyAccountBalance >= 150) {
+                rewardMessages.push('<div class="150" style="position: relative;"><svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; top: 0; left: 0; z-index: -1;"><rect x="0" y="0" width="100" height="100" fill="#ccc" /></svg>Free Box of Brew Or QC Cup<button class="redeem-btn" onclick="showConfirmationPopup(150)" style="margin-left: 10px; background-color: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Redeem Online</button></div>');
+              }
+              if (loyaltyAccountBalance >= 100) {
+                rewardMessages.push('<div class="100" style="position: relative;"><svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; top: 0; left: 0; z-index: -1;"><rect x="0" y="0" width="100" height="100" fill="#ccc" /></svg>$10.00 off any merch<button class="redeem-btn" onclick="showConfirmationPopup(100)" style="margin-left: 10px; background-color: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Redeem Online</button></div>');
+              }
+              if (loyaltyAccountBalance >= 50) {
+                rewardMessages.push('<div class="50" style="position: relative;"><svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; top: 0; left: 0; z-index: -1;"><rect x="0" y="0" width="100" height="100" fill="#ccc" /></svg>Free Drink or Burrito - 50 Beans<button class="redeem-btn" onclick="showConfirmationPopup(50)" style="margin-left: 10px; background-color: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Redeem Online</button></div>');
+              }
+              if (loyaltyAccountBalance >= 35) {
+                rewardMessages.push('<div class="35" style="position: relative;"><svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; top: 0; left: 0; z-index: -1;"><rect x="0" y="0" width="100" height="100" fill="#ccc" /></svg>Free Pastry - 35 Beans<button class="redeem-btn" onclick="showConfirmationPopup(35)" style="margin-left: 10px; background-color: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Redeem Online</button></div>');
+              }
+              if (loyaltyAccountBalance >= 15) {
+                rewardMessages.push('<div class="15" style="position: relative;"><svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; top: 0; left: 0; z-index: -1;"><rect x="0" y="0" width="100" height="100" fill="#ccc" /></svg>Free Sticker - 15 Beans<button class="redeem-btn" onclick="showConfirmationPopup(15)" style="margin-left: 10px; background-color: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Redeem Online</button></div>');
+              }
+          
+              // Check if reward messages have already been displayed
+              if (!rewardMessagesDisplayed && rewardMessages.length > 0) {
+                // Set flag variable to true
+                rewardMessagesDisplayed = true;
+            
+                // Display all the reward messages
+                var rewardMessageDiv = document.createElement("div");
+                for (var i = 0; i < rewardMessages.length; i++) {
+                  var rewardMessage = rewardMessages[i];
+                  rewardMessageDiv.innerHTML += rewardMessage + "<br>";
+                }
+                document.getElementById("reward-message").appendChild(rewardMessageDiv);
+              }
+            }
+                
+                // Submit form
+                function submitForm(event) {
+                  event.preventDefault();
+                
+                  // Get the phone number input field value
+                  var phoneNumberInput = document.getElementById("phone");
+                  var phoneNumber = phoneNumberInput.value;
+                
+                  // Format phone number for display
+                  var formattedPhoneNumberDisplay = formatPhoneNumberDisplay(phoneNumber);
+                
+                  // Update the input field value with the formatted phone number for display
+                  phoneNumberInput.value = formattedPhoneNumberDisplay;
+                
+                  // Format phone number for submission
+                  var formattedPhoneNumberSubmit = formatPhoneNumberSubmit(phoneNumber);
+                
+                    // Get the loading GIF element
+                    var loadingGif = document.getElementById("loading-gif");
+        
+                    // Show the loading GIF before sending the request
+                    loadingGif.style.display = "block";
+        
+                    // Send a POST request to the Google Cloud Function with the phone number
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "https://us-central1-naot-inventory.cloudfunctions.net/ventoloyalty-v3", true);
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.onreadystatechange = function() {
+                      if (this.readyState === XMLHttpRequest.DONE) {
+                        // Hide the loading GIF after receiving the response
+                        loadingGif.style.display = "none";
+                        if (this.status === 200) {
+                          // Parse the response data
+                          var response = JSON.parse(xhr.responseText);                // Check if the response contains any data
+                        if (Object.keys(response).length === 0 && response.constructor === Object) {
+                          // Display the "Sign up now" button
+                          document.getElementById("signup-button").style.display = "block";
+                          update(0); // Update progress bar to 0
+                        } else {
+                          // Display the loyalty account information on the page
+                          var loyaltyAccount = response;
+                          var loyaltyAccountBalance = loyaltyAccount.loyalty_accounts[0].balance;
+                          var loyaltyAccountMessage = "Loyalty Account Balance: " + loyaltyAccountBalance;
+                          document.getElementById("loyalty-account-message").innerHTML = loyaltyAccountMessage;
+                
+                          // Calculate progress based on loyalty points
+                          var currentActive = 0;
+                          if (loyaltyAccountBalance >= 200) {
+                            currentActive = 6;
+                          } else if (loyaltyAccountBalance >= 150) {
+                            currentActive = 5;
+                          } else if (loyaltyAccountBalance >= 100) {
+                            currentActive = 4;
+                          } else if (loyaltyAccountBalance >= 50) {
+                            currentActive = 3;
+                          } else if (loyaltyAccountBalance >= 35) {
+                            currentActive = 2;
+                          } else if (loyaltyAccountBalance >= 15) {
+                            currentActive = 1;
+                          }
+                          update(currentActive); // Update progress bar
+                          console.log('current active circles: ', currentActive);
+                
+        
+                        }
+                          }
+                        }
+                        };
+                
+                xhr.send(JSON.stringify({
+                phone: formattedPhoneNumberSubmit
+                }));
+                }
+                
+            function handleEmailInput() {
+              var emailInput = document.getElementById("email");
+              emailAddress = emailInput.value
+              console.log(emailAddress)
+              var confirmRewardBtn = document.getElementById("confirm-reward-btn");
+              if (emailInput.checkValidity()) {
+                confirmRewardBtn.disabled = false;
+              } else {
+                confirmRewardBtn.disabled = true;
+              }
+            }
+            
+            document.getElementById("email").addEventListener("input", handleEmailInput);
+        
+        
+        
+        
+        
+        
+          function update(currentActive) {
+            console.log('currentActive: ', currentActive);
+            stepRectangles.forEach((rectangle, i) => {
+                console.log('i = ', i);
+              if (i <= currentActive - 1) {
+                rectangle.style.opacity = "1";
+                rectangle.style.backgroundColor = "#d1b48d";
+
+              } else {
+                rectangle.style.opacity = "0.5";
+                rectangle.style.backgroundColor = "#d6d6d6";
+              }
+            });
+            stepredeembtn.forEach((redeembtn, i) => {
+              if (i <= currentActive - 1) {
+                redeembtn.style.opacity = "1";
+              } else {
+                redeembtn.style.opacity = "0";
+              }
+            });
+            stepCircles.forEach((circle, i) => {
+              if (i < currentActive) {
+                circle.classList.add("active");
+              } else {
+                circle.classList.remove("active");
+              }
+        
+              const h3List = circle.querySelectorAll("h3");
+              if (i < currentActive) {
+                h3List.forEach((h3) => {
+                  h3.style.color = "#fff";
+                });
+              } else {
+                h3List.forEach((h3) => {
+                  h3.style.color = "";
+                });
+              }
+            });
+        
+            const activeCircles = document.querySelectorAll(".active");
+          }    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <style>
+
+                label {
+                    font-family: helvetica;
+                    font-weight: bolder;
+                    color: #3D8899;
+                    font-size: xx-large;
+                    font-weight: bolder;
+                }
+                  .btn {
+                    background-color: var(--line-border-fill);
+                    color: #fff;
+                    cursor: pointer;
+                    font-family: inherit;
+                    border: 0;
+                    border-radius: 6px;
+                    padding: 8px 30px;
+                    margin: 5px;
+                    font-size: 14px;
+                  }
+                  .btn:active {
+                    transform: scale(0.98);
+                  }
+                  .btn:focus {
+                    outline: 0;
+                  }
+                  .btn:disabled {
+                    background-color: var(--line-border-empty);
+                    cursor: not-allowed;
+                  }
+            
+                  .phonenumber {
+                        border: 2px solid #3D8899;
+                        border-radius: 5px;
+                        padding: 10px;
+                    }
+                    .email {
+                        border: 2px solid #3D8899;
+                        border-radius: 5px;
+                        padding: 10px;
+                    }               
+
+                         label, input {
+                    margin: 10px 0;
+                    }
+                    
+                    input[type="submit"] {
+                    background-color: #4CAF50;
+                    border: none;
+                    color: white;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    margin: 0em;
+                    padding: 1px 2px;
+                    border-width: 2px;
+                    border-style: inset;
+                    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+                    border-image: initial;
+                    }
+                input#phone {
+                margin: 0em !important;
+                    padding: 1px 2px !important;
+                    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133)) !important;
+                    border-image: initial !important;
+                    width: 75%;
+                }
+                #loading-gif {
+                  position: fixed;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  z-index: 9999;
+                }
+                #loading-gif {
+                  position: fixed;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  z-index: 9999;
+                  background-color: rgba(255, 255, 255, 0.7);
+                  border-radius: 5px;
+                  padding: 20px;
+                }
+    
+                #loading-gif img {
+                  display: block;
+                  margin: 0 auto;
+                }
+    
+    
+    
+    
+                :root {
+        --line-border-fill: #3e8899;
+        --line-border-empty: #3e8899;
+      }
+      .rectangle {
+        width: 50px;
+        height: 224px;
+        top: -393%;
+        border-radius: 50px 50px 0px 0px;
+        z-index: -1;
+        position: absolute;
+        background-color: #d1b48d;
+      }
+      .rectangle2 {
+        width: 50px;
+        height: 84px;
+        top: 60%;
+        border-radius: 50px 50px 0px 0px;
+        z-index: -1;
+        position: absolute;
+        background-color: #3e8899;
+      }
+      .redeem-btn {
+        background-color: #204c69;
+        width: 80%;
+        height: 28%;
+        border-radius: 79px;
+        position: relative;
+        top: 3%;
+        right: -9%;
+      }
+      .button15t {
+        color: white;
+        top: 34%;
+        position: relative;
+      }
+      .freesticker {
+        top: 41%;
+        right: -5%;
+        font-size: 0.6em;
+        position: absolute;
+        color: #204c69;
+      }
+      .freepastry {
+        top: 41%;
+        right: 0%;
+        font-size: 0.6em;
+        position: absolute;
+        color: #204c69;
+      }
+      .freedrink {
+        top: 41%;
+        right: 8%;
+        font-size: 0.7em;
+        position: absolute;
+        color: #204c69;
+      }
+      .freemerch {
+        top: 41%;
+        right: 3%;
+        font-size: 0.7em;
+        position: absolute;
+        color: #204c69;
+      }
+      .freecup {
+        top: 41%;
+        right: 15%;
+        font-size: 0.7em;
+        position: absolute;
+        color: #204c69;
+      }
+      .freebag {
+        top: 41%;
+        right: -1%;
+        font-size: 0.5em;
+        position: absolute;
+        color: #204c69;
+      }
+      .img15bean {
+        scale: 0.15;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: -175%;
+        z-index: 17;
+        right: -314%;
+      }
+      .t15bean {
+        font-size: 1.5em;
+        top: 9px;
+        margin-right: 9px;
+      }
+      .t35bean {
+        font-size: 1.5em;
+        top: 8px;
+        margin-right: 8px;
+      }
+      .t50bean {
+        font-size: 1.5em;
+        top: 7px;
+        margin-right: 8px;
+      }
+      .t100bean {
+        font-size: 1em;
+        top: 6px;
+        margin-right: 8px;
+        margin-top: 6px;
+      }
+      .t150bean {
+        font-size: 1em;
+        top: 6.5px;
+        margin-right: 8px;
+        margin-top: 6px;
+      }
+      .t200bean {
+        font-size: 1em;
+        top: 6px;
+        margin-right: 8px;
+        margin-top: 3px;
+      }
+      .beantext {
+        font-size: 0.6em;
+        position: absolute;
+        margin-right: -22px;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: inherit;
+      }
+    
+      html {
+        box-sizing: border-box;
+      }
+    
+      #body2 {
+        transform: rotate(90deg);
+        background: #ffffff;
+        font-family: "Monsterrat";
+        display: inline-grid;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0;
+        position: absolute;
+        width: 363px;
+        top: 0%;
+        scale: 1.2;
+        height: 83%;
+      }
+    
+      .container2 {
+        text-align: center;
+      }
+    
+      .progress-container::before {
+        content: "";
+        background: #3e8899;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 4px;
+        width: 100%;
+        z-index: -1;
+      }
+    
+      .progress-container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        max-width: 100%;
+        width: 350px;
+      }
+    
+      .progress {
+        background: var(--line-border-fill);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 4px;
+        width: 0%;
+        z-index: -1;
+        transition: 0.4s ease;
+      }
+    
+      .circle {
+        background: #fff;
+        color: #999;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid var(--line-border-empty);
+        transition: 0.4s ease;
+      }
+    
+      .circle.active {
+        border-color: var(--line-border-fill);
+        background: #3e8899;
+      }
+    
+      h3 {
+        color: #3e8899;
+        transform: rotate(-90deg);
+        font-size: 0.48em;
+        font-family: "Helvetica_LT_Std_Black" !important;
+      }
+      .btn {
+        background-color: var(--line-border-fill);
+        color: #fff;
+        cursor: pointer;
+        font-family: inherit;
+        border: 0;
+        border-radius: 6px;
+        padding: 8px 30px;
+        margin: 5px;
+        font-size: 14px;
+      }
+    
+      .btn:active {
+        transform: scale(0.98);
+      }
+    
+      .btn:focus {
+        outline: 0;
+      }
+    
+      .btn:disabled {
+        background-color: var(--line-border-empty);
+        cursor: not-allowed;
+      }
+      /* Shopify fixes */
+      .rte img {
+        height: auto !important;
+        max-width: none !important;
+        border: none !important;
+        border-radius: none;
+        box-shadow: none !important;
+        margin-bottom: none !important;
+      }
+      @media screen and (min-width: 768px) {
+        #body2 {
+          transform: rotate(0deg);
+          background: #a1646400;
+          font-family: "Monsterrat";
+          display: inline-grid;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          margin: 0;
+          position: absolute;
+          width: 363px;
+          top: 0%;
+          scale: 1.5;
+          right: 37%;
+          height: 83%;
+        }
+        h3 {
+          color: #3e8899;
+          transform: rotate(0deg);
+          font-size: 0.48em;
+          font-family: "Helvetica_LT_Std_Black" !important;
+        }
+        .beantext {
+          font-size: 0.6em;
+          position: absolute;
+          margin-right: 0px;
+          top: 55%;
+        }
+        .t15bean {
+          font-size: 1.5em;
+          position: absolute;
+          top: 6px;
+          margin-right: 0px;
+        }
+        .t35bean {
+          font-size: 1.5em;
+          position: absolute;
+          top: 6px;
+          margin-right: 0px;
+        }
+        .t50bean {
+          font-size: 1.5em;
+          position: absolute;
+          top: 6px;
+          margin-right: 0px;
+        }
+        .t100bean {
+          font-size: 1em;
+          top: 13px;
+          margin-right: 0px;
+          position: absolute;
+          margin-top: -3px;
+        }
+        .t150bean {
+          font-size: 1em;
+          top: 13px;
+          margin-right: 0px;
+          position: absolute;
+          margin-top: -3px;
+        }
+        .t200bean {
+          font-size: 1em;
+          top: 13px;
+          margin-right: 0px;
+          position: absolute;
+          margin-top: -3px;
+        }
+        .rectangle {
+          width: 50px;
+          height: 224px;
+          top: 46%;
+          border-radius: 50px 50px 0px 0px;
+          z-index: -1;
+          position: absolute;
+          transform: rotate(180deg);
+          background-color: #d1b48d;
+        }
+        .rectangle2 {
+          width: 50px;
+          height: 84px;
+          top: 60%;
+          border-radius: 50px 50px 0px 0px;
+          z-index: -1;
+          position: absolute;
+          background-color: #3e8899;
+        }
+        .img15bean {
+          scale: 0.15;
+          transform: rotate(180deg);
+          position: absolute;
+          top: -187%;
+          border-radius: 100% !important;
+          right: -319%;
+        }
+        .redeem-btn {
+          background-color: #204c69;
+          width: 80%;
+          height: 28%;
+          transform: rotate(180deg);
+          border-radius: 79px;
+          position: relative;
+          top: 3%;
+          right: -9%;
+        }
+        .freesticker {
+          top: 41%;
+          right: 1%;
+          transform: rotate(180deg);
+          font-size: 0.56em;
+          position: absolute;
+          color: #204c69;
+        }
+        .freepastry {
+          top: 41%;
+          right: 4%;
+          transform: rotate(180deg);
+          font-size: 0.6em;
+          position: absolute;
+          color: #204c69;
+        }
+        .freedrink {
+        top: 41%;
+        right: 8%;
+        transform: rotate(180deg);
+        font-size: 0.7em;
+        position: absolute;
+        color: #204c69;
+    }
+    .freemerch {
+        top: 41%;
+        right: 3%;
+        transform: rotate(180deg);
+        font-size: 0.7em;
+        position: absolute;
+        color: #204c69;
+    }
+    .freecup {
+        top: 41%;
+        right: 15%;
+        transform: rotate(180deg);
+        font-size: 0.7em;
+        position: absolute;
+        color: #204c69;
+    }
+    .freebag {
+        top: 41%;
+        right: -1%;
+        transform: rotate(180deg);
+        font-size: 0.5em;
+        position: absolute;
+        color: #204c69;
+    }
+      }
+      .signup-button {
+          margin-top: 30px;
+          align-items: center;
+          appearance: none;
+          background-color: #3D8899;
+          border-radius: 24px;
+          border-style: none;
+          box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+            rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+          box-sizing: border-box;
+          color: white;
+          cursor: pointer;
+          display: inline-flex;
+          font-family: helvetica;
+          font-size: 1em;
+          font-weight: 500;
+          height: 48px;
+          justify-content: center;
+          letter-spacing: 0.25px;
+          line-height: normal;
+          max-width: 100%;
+          overflow: visible;
+          padding: 2px 24px;
+          position: relative;
+          text-align: center;
+          text-transform: none;
+          width: auto;
+          --border-offset: none;
+          --border-opacity: 0 !important;
+        }
+    .signup-button:hover {
+        background: #214B69;
+        color: white;
+        --border-offset: none;
+        --border-opacity: 0 !important;
+      }  
+      .check-loyalty-button {
+          margin-top: 15px;
+          align-items: center;
+          appearance: none;
+          background-color: #3D8899;
+          border-radius: 24px;
+          border-style: none;
+          box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+            rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+          box-sizing: border-box;
+          color: white;
+          cursor: pointer;
+          display: inline-flex;
+          font-family: helvetica;
+          font-size: 1em;
+          font-weight: 500;
+          height: 48px;
+          justify-content: center;
+          letter-spacing: 0.25px;
+          line-height: normal;
+          max-width: 100%;
+          overflow: visible;
+          padding: 2px 24px;
+          position: relative;
+          text-align: center;
+          text-transform: none;
+          width: auto;
+          --border-offset: none;
+          --border-opacity: 0 !important;
+      }
+      .copy-coupon {
+          margin-bottom: 15px;
+          align-items: center;
+          appearance: none;
+          background-color: #3D8899;
+          border-radius: 24px;
+          border-style: none;
+          box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+            rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+          box-sizing: border-box;
+          color: white !important;
+          cursor: pointer;
+          display: inline-flex;
+          font-family: helvetica;
+          font-size: 1em;
+          font-weight: 500;
+          height: 48px;
+          justify-content: center;
+          letter-spacing: 0.25px;
+          line-height: normal;
+          max-width: 100%;
+          overflow: visible;
+          padding: 2px 24px;
+          position: relative;
+          text-align: center;
+          text-transform: none;
+          width: auto;
+          --border-offset: none;
+          --border-opacity: 0 !important;
+      }
+      .copy-coupon:hover {
+        background: #214B69;
+        color: white !important;
+        --border-offset: none;
+        --border-opacity: 0 !important;
+      }  
+
+      .confirm-reward-btn {
+        margin-top: 15px;
+          align-items: center;
+          appearance: none;
+          background-color: #3D8899;
+          border-radius: 24px;
+          border-style: none;
+          box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+            rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+          box-sizing: border-box;
+          color: white;
+          cursor: pointer;
+          display: inline-flex;
+          font-family: helvetica;
+          font-size: 1em;
+          font-weight: 500;
+          height: 48px;
+          justify-content: center;
+          letter-spacing: 0.25px;
+          line-height: normal;
+          max-width: 100%;
+          overflow: visible;
+          padding: 2px 24px;
+          position: relative;
+          text-align: center;
+          text-transform: none;
+          width: auto;
+          --border-offset: none;
+          --border-opacity: 0 !important;
+
+      }
+    .check-loyalty-button:hover {
+        background: #214B69;
+        color: white;
+        --border-offset: none;
+        --border-opacity: 0 !important;
+      }  
+      .confirm-reward-btn:hover {
+        background: #214B69;
+        color: white;
+        --border-offset: none;
+        --border-opacity: 0 !important;
+      }  
+
+                </style>
